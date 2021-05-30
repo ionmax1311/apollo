@@ -9,3 +9,41 @@
 	line-height: 24px;
 	color: #666;
 }
+
+@mixin position-center {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+@mixin wrap-block {
+	background: $bg-sidebar;
+	border: 1px solid $border-color;
+	border-radius: 10px;
+}
+
+@mixin content-title {
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+@mixin content-subtitle {
+	color: $text-color-muted;
+	font-size: 14px;
+	padding-bottom: 5px;
+}
+
+@mixin btn-fill {
+	color: $bg-body;
+	border-radius: 10px;
+	background: $accent-color;
+	font-weight: bold;
+	font-size: 14px;
+	padding: 14px;
+	width: 118px;
+	&:hover {
+		background: darken($accent-color, 20%);
+	}
+}

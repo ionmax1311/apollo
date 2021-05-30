@@ -1,0 +1,40 @@
+.header {
+	border-bottom: 1px solid $border-color;
+
+	&-container {
+		max-width: 900px;
+		margin: 0 auto;
+		@include flex;
+		align-items: center;
+		width: 100%;
+		min-height: 80px;
+	}
+	ul {
+		display: flex;
+		li {
+			list-style-type: none;
+			color: #fff;
+			margin-right: 25px;
+
+			a {
+				padding: 0 9px;
+				color: #fff;
+				display: block;
+				&:hover {
+					color: darken(#fff, 20%);
+				}
+			}
+		}
+	}
+	.btn-started {
+		color: #c2c2c2;
+		font-size: 14px;
+		width: 192px;
+		padding: 13px;
+		border-radius: 10px;
+		background: $bg-sidebar;
+		&:hover {
+			background: darken($bg-sidebar, 20%);
+		}
+	}
+}

@@ -1,10 +1,13 @@
-@import 'bootstrap/bootstrap';
-@import 'bootstrap/variables';
-@import 'bootstrap/mixins';
+@import "bootstrap/bootstrap";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
 @import "variables";
 @import "mixins";
 @import "sidebar";
 @import "content";
+@import "auth";
+@import "table";
+@import "faq";
 @import "header";
 @import "footer";
 
@@ -43,10 +46,11 @@ label {
 	margin: 0;
 }
 button {
-	transition: .3s all ease;
+	transition: 0.3s all ease;
 	background: 0;
 	border: 0;
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		text-decoration: none !important;
 		outline: none !important;
 		box-shadow: none !important;
@@ -77,25 +81,19 @@ ul {
 	}
 }
 
-
-
 a {
 	transition: 0.2s;
 	outline: none;
 	&:hover {
-	
 		text-decoration: none;
 	}
 }
-
-
 
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 }
-
 
 .faded {
 	z-index: 6;
@@ -120,9 +118,24 @@ select {
 }
 
 .wrapper {
-    width: 100%;
-  }
-  
+	width: 100%;
+}
 
+.success-color {
+	color: #02c076;
+}
 
+.danger-color {
+	color: #f84960;
+}
+.text-color-muted {
+	color: $text-color-muted;
+}
+// .nav-tabs .nav-link.active {
+// 	background-color: none;
+// 	border-color: none;
+// }
 
+.nav-tabs {
+	border-bottom: none;
+}

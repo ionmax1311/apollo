@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/solid.min.css" integrity="sha512-SazV6tF6Ko4GxhyIZpKoXiKYndqzh7+cqxl9HDH7DGSpjkCN3QLqTAlhJHJnKxu3/2rfCsltzwFC4CmxZE1hPg==" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+
+	<link rel="stylesheet" href="css/index.css">
+	<title>Apollo 7 your trades</title>
+</head>
+
+<body>
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+	<div class="close-sidebar d-block d-lg-none pt-4 pl-4 sidebarCollapse">
+		<img src="./img/close-icon.png" alt="">
+	</div>
+	<div class="inner pt-5 pl-4 pl-lg-5">
+		<a href="#" class="img logo rounded-circle">
+			<img src="./img/logo.png" alt="">
+		</a>
+		<ul>
+			<li class="">
+				<a href="/" class="link border-top-0 active">Dashboard</a>
+				<ul class="" id="homeSubmenu">
+					<li>
+						<a href="your-trades.html" class="sublink">Your Trades</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a class="link" href="order-history.html"><span>Order History</span> </a>
+			</li>
+			<li>
+				<a href="#" class="link">Settings</a>
+				<ul class="" id="pageSubmenu">
+					<li>
+						<a href="#" class="sublink">Basic Information</a>
+					</li>
+					<li>
+						<a href="#" class="sublink">Payments</a>
+					</li>
+					<li>
+						<a href="#" class="sublink">Subscription</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="support ml-4 ml-lg-5 mb-5">
+		<span class="title">Support</span>
+		<ul>
+			<li><a href="#" class="telegram">Telegram</a></li>
+			<li><a href="#" class="whatsapp">WhatsApp</a></li>
+			<li><a href="#" class="viber">Viber</a></li>
+		</ul>
+	</div>
+</nav>
+
+
+		<div id="content" class="pt-4 pl-4 pt-lg-5 pr-4">
+			<div class="dashboard">
+				<div class="top pb-4">
+					<button type="button" class="sidebarCollapse sidebar-burger d-lg-none pl-0">
+						<img src="./img/burger-icon.png" alt="">
+						<!-- <span class="sr-only">Toggle Menu</span> -->
+					</button>
+					<h2 class="top-title d-none d-lg-block">
+						Your Trades
+					</h2>
+					<!-- <h2 class="title-top-mob">Dashboard_v2</h2> -->
+					<a href="#" class="user">
+						<img class="user-img" src="img/user-img.png" alt="">
+						<span class="user-name">Jane Cooper</span>
+					</a>
+				</div>
+				<h2 class="top-title-mob d-block d-lg-none pt-0 pt-lg-4 pb-4">
+					Your Trades
+				</h2>
+
+				<div class="trades-table-wrap pt-5 mb-5">
+					<div class="dashboart-table-filter">
+						<div class="form-group">
+							<label for="trades-date-filter">Date</label>
+							<input type="text" class="form-control" id="trades-date-filter">
+						</div>
+						<div class="form-group">
+							<label for="trades-select-filter">Asset</label>
+							<select class="form-control" id="trades-select-filter">
+								<option>All/All</option>
+								<option>2</option>
+								<option>3</option>
+
+							</select>
+						</div>
+						<button class="btn-trades-reset" type="button">Reset</button>
+						<button class="btn-trades-search" type="button">Search</button>
+						<div class="form-check check-closed">
+							<input type="checkbox" class="form-check-input" id="check-closed">
+							<label class="form-check-label" for="check-closed">Hide all closed
+							</label>
+						</div>
+						<div class="trades-export ml-auto">
+							<span>Export History</span><img src="./img/export-icon.png" alt="">
+						</div>
+					</div>
+					<div class="trades-table">
+						
+						<table id="dashboard-table" class="table table-striped" style="width: 100%">
+	<thead>
+		<tr class="title">
+			<th>#</th>
+			<th>Date/Time</th>
+			<th>Asset</th>
+			<th>Enter Balance</th>
+			<th>Exposure Time</th>
+			<th>PNL</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="number title">1</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>85.95 USDT</td>
+			<td class="success-color"><span class="opened">Opened</span></td>
+			<td class="success-color">0.43%</td>
+			<td><span class="close-action">Close</span></td>
+		</tr>
+		<tr>
+			<td class="number title">2</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="danger-color">-3.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">3</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="danger-color">-3.82%</td>
+			<td><span class="close-action">Close</span></td>
+		</tr>
+		<tr>
+			<td class="number title">4</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="success-color">3.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">5</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="success-color">3.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">6</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="success-color">14.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">7</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="success-color">14.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">8</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="success-color">14.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">9</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="success-color">14.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">10</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="success-color">14.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">11</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="success-color">14.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+		<tr>
+			<td class="number title">12</td>
+			<td>26.04.2021 17:00</td>
+			<td>BTC/USDT</td>
+			<td>75.25 USDT</td>
+			<td>2h 54m</td>
+			<td class="danger-color">14.82%</td>
+			<td class="text-color-muted">Closed</td>
+		</tr>
+	</tbody>
+</table>
+
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	<div class="footer pl-4 pl-sm-5 pr-4 pr-sm-5 d-flex flex-column-reverse flex-lg-row pt-4 pb-4 pt-lg-0 pb-lg-0">
+	<span class="copy">© 2021 SynergyOne</span>
+	<ul class="text-link mr-xl-auto pt-4 pb-4 pt-lg-0 pb-lg-0">
+		<li><a href="#">Price</a></li>
+		<li><a href="#">Terms of use</a></li>
+		<li><a href="#">Privacy policy</a></li>
+	</ul>
+	<ul class="social-link">
+		<li>
+			<a href="#"><img src="./img/whatsapp-icon.png" alt=""></a>
+		</li>
+		<li>
+			<a href="#"><img src="./img/youtube-icon.png" alt=""></a>
+		</li>
+		<li>
+			<a href="#"><img src="./img/instagram-icon.png" alt=""></a>
+		</li>
+		<li>
+			<a href="#"><img src="./img/linkedin-icon.png" alt=""></a>
+		</li>
+		<li>
+			<a href="#"><img src="./img/facebook-icon.png" alt=""></a>
+		</li>
+		<li>
+			<a href="#"><img src="./img/telegram-icon.png" alt=""></a>
+		</li>
+		<li>
+			<a href="#"><img src="./img/twitter-icon.png" alt=""></a>
+		</li>
+	</ul>
+</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+	<script src="js/index.js"></script>
+</body>
+
+</html>

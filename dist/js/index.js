@@ -36,10 +36,31 @@ $(".form-check label").click(function () {
 
 	$(".sidebarCollapse").on("click", function () {
 		$("#sidebar").toggleClass("active");
+		$("body").toggleClass("hidden");
+		$(".overlay").toggleClass("active");
+
+	});
+	$(".panel-heading").on("click", function () {
+		$(this).find(".fa-chevron-down").toggleClass("active");
 	});
 })(jQuery);
 
+$("input[type=checkbox]").click(function () {
+	if ($(this).is(":checked")) {
+
+		$(this).attr('checked', true);
+		$(this).val(1);
+		console.log('checked---', $(this).val());
+	} else {
+		$(this).attr('checked', false);
+		$(this).val(0);
+		console.log('not checked---', $(this).val());
+	}
+});
+
 $(document).ready(function () {
+
+
 	$("#dashboard-table").DataTable({
 		// info: false,
 		language: {
@@ -85,20 +106,20 @@ $(document).ready(function () {
 // 	$(this).addClass('active')
 // })
 
-$(document).ready(function () {
-	console.log($(".wrapper").hasClass("dashboard-active"));
-	if ($(".wrapper").hasClass("dashboard-active")) {
-		$(".inner a").removeClass("active");
-		$(".inner").find('a:contains("Dashboard")');
+// $(document).ready(function () {
+// 	console.log($(".wrapper").hasClass("dashboard-active"));
+// 	if ($(".wrapper").hasClass("dashboard-active")) {
+// 		$(".inner a").removeClass("active");
+// 		$(".inner").find('a:contains("Dashboard")');
 
-		console.log(1);
-	} else if ($(".wrapper").hasClass("order-history-active")) {
-		$(".inner a").removeClass("active");
-		$(".inner").find('a:contains("Order History")');
+// 		console.log(1);
+// 	} else if ($(".wrapper").hasClass("order-history-active")) {
+// 		$(".inner a").removeClass("active");
+// 		$(".inner").find('a:contains("Order History")');
 
-		console.log(2);
-	}
-});
+// 		console.log(2);
+// 	}
+// });
 
 $(".slider-card").slick({
 	// autoplay: true,

@@ -42,7 +42,7 @@
 			line-height: 29px;
 		}
 		&-left {
-			padding-right: 50px;
+			// padding-right: 50px;
 			border-right: 1px solid $border-color;
 		}
 		.current-amount {
@@ -50,6 +50,16 @@
 		}
 		&-wrap {
 			width: 337px;
+			@media (max-width: 767px) {
+				width: auto;
+			}
+		}
+		&-bottom {
+			display: grid;
+    		grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: 767px) {
+			width: auto;
 		}
 	}
 	&-graph {
@@ -58,6 +68,7 @@
 		&-wrap {
 			width: 100%;
 		}
+		
 	}
 	.content-title {
 		@include content-title;
@@ -85,6 +96,9 @@
 			&:focus {
 				border-color: transparent;
 				border-radius: 10px;
+			}
+			@media (max-width: 480px) {
+				margin-right: 5px;
 			}
 		}
 		.nav-tabs {

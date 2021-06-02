@@ -292,3 +292,15 @@ table.dataTable {
 		}
 	}
 }
+
+@media (max-width: 910px) {
+	.dataTables_wrapper {
+		width: 840px;	
+	}
+	.dashboart-table {
+		
+		overflow-y: hidden;
+		white-space: nowrap
+	}
+	
+}

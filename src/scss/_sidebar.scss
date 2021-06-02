@@ -4,6 +4,7 @@
 	background: $bg-sidebar;
 	color: #fff;
 	transition: all 0.3s;
+	z-index: 9;
 	&.active {
 		margin-left: -250px;
 	}
@@ -116,9 +117,12 @@
 	}
 	.close-sidebar {
 		cursor: pointer;
+		margin-top: 10px;
 	}
 	@media (max-width: 992px) {
 		position: absolute;
+		overflow-y: auto;
+		height: 100%;
 	}
 }
 

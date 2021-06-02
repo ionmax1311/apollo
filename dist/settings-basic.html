@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
 
 		<link rel="stylesheet" href="css/index.css">
-		<title>Apollo 7 your trades</title>
+		<title>Apollo 7 settings basic</title>
 	</head>
 
 	<body>
@@ -71,7 +71,9 @@
 							<img src="./img/burger-icon.png" alt="">
 							<!-- <span class="sr-only">Toggle Menu</span> -->
 						</button>
-						<h2 class="top-title d-none d-lg-block">Your Trades</h2>
+						<h2 class="top-title d-none d-lg-block">
+							Settings | Basic Information
+						</h2>
 						<!-- <h2 class="title-top-mob">Dashboard_v2</h2> -->
 						<a href="#" class="user">
 							<img class="user-img" src="img/user-img.png" alt="">
@@ -79,164 +81,74 @@
 						</a>
 					</div>
 					<h2 class="top-title-mob d-block d-lg-none pt-0 pt-lg-4 pb-4">
-						Your Trades
+						Settings | Basic Information
 					</h2>
-
-					<div class="trades-table-wrap pt-5 mb-5">
-						<div class="dashboart-table-filter">
-							<div class="form-group">
-								<label for="trades-date-filter">Date</label>
-								<input type="text" class="form-control" id="trades-date-filter">
-							</div>
-							<div class="form-group">
-								<label for="trades-select-filter">Asset</label>
-								<select class="form-control" id="trades-select-filter">
-									<option>All/All</option>
-									<option>2</option>
-									<option>3</option>
-								</select>
-							</div>
-							<button class="btn-trades-reset" type="button">
-								Reset
-							</button>
-							<button class="btn-trades-search" type="button">
-								Search
-							</button>
-							<div class="form-check check-closed">
-								<input type="checkbox" class="form-check-input" id="check-closed">
-								<label class="form-check-label" for="check-closed">Hide all closed
-								</label>
-							</div>
-							<div class="trades-export ml-auto">
-								<span>Export History</span><img src="./img/export-icon.png" alt="">
+					<div class="dashboard-content-top settings pt-5">
+						<div class="settings-title-top pb-4">
+							<h4 class="content-title">Account Info</h4>
+							<div>
+								<a href="#" class="edit">Edit information
+									<img class="ml-3" src="img/edit-icon.png" alt=""></a>
+								<a href="#" class="logout">LogOut
+									<img class="ml-3" src="img/logout-icon.png" alt="">
+								</a>
 							</div>
 						</div>
-						<div class="trades-table">
-							
-							<table id="dashboard-table" class="table table-striped" style="width: 100%">
-	<thead>
-		<tr class="title">
-			<th>#</th>
-			<th>Date/Time</th>
-			<th>Asset</th>
-			<th>Enter Balance</th>
-			<th>Exposure Time</th>
-			<th>PNL</th>
-			<th>Action</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td class="number title">1</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>85.95 USDT</td>
-			<td class="success-color"><span class="opened">Opened</span></td>
-			<td class="success-color">0.43%</td>
-			<td><span class="close-action">Close</span></td>
-		</tr>
-		<tr>
-			<td class="number title">2</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">-3.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">3</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">-3.82%</td>
-			<td><span class="close-action">Close</span></td>
-		</tr>
-		<tr>
-			<td class="number title">4</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">3.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">5</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">3.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">6</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">7</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">8</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">9</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">10</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">11</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">12</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-	</tbody>
-</table>
-
+						<div class="settings-basic-wrap">
+							<div class="settings-avatar-wrap mr-4">
+								<span class="title">Avatar</span>
+								<img src="img/avatar.png" alt="">
+								<a class="upload-img-link" href="#">Upload New
+									<img src="img/plus-icon.png" alt="">
+								</a>
+							</div>
+							<div class="settings-basic-information">
+								<form>
+									<div class="form-grid-3">
+										<div class="form-group">
+											<label for="f-name-settings">First Name</label>
+											<input type="text" class="form-control" id="f-name-settings">
+										</div>
+										<div class="form-group">
+											<label for="l-name-settings">Last Name</label>
+											<input type="text" class="form-control" id="l-name-settings">
+										</div>
+										<div class="form-group">
+											<label for="nick-name-settings">Nick Name</label>
+											<input type="text" class="form-control" id="nick-name-settings">
+										</div>
+									</div>
+									<div class="form-grid-2">
+										<div class="form-group">
+											<label for="email-settings">Email</label>
+											<input type="email" class="form-control" id="email-settings">
+										</div>
+										<div class="form-group">
+											<label for="phone-settings">Phone *</label>
+											<input type="text" class="form-control" id="phone-settings">
+										</div>
+									</div>
+									<div class="form-grid-3">
+										<div class="form-group position-relative">
+											<label for="password-settings">Password</label>
+											<input type="password" class="form-control password" id="password-settings" autocomplete="on">
+											<!-- <img class="password-icon" src="./img/password-icon.png" alt=""> -->
+										</div>
+										<div class="form-group">
+											<label for="question-settings">Secret question
+											</label>
+											<input type="text" class="form-control" id="question-settings">
+										</div>
+										<div class="form-group">
+											<label for="answer-settings">Answer</label>
+											<input type="text" class="form-control" id="answer-settings">
+										</div>
+									</div>
+									<button type="button" class="btn-settings-basic">
+										Save
+									</button>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>

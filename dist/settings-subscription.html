@@ -11,11 +11,11 @@
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
 
 		<link rel="stylesheet" href="css/index.css">
-		<title>Apollo 7</title>
+		<title>Apollo 7 settings subscription</title>
 	</head>
 
 	<body>
-		<div class="wrapper d-flex align-items-stretch dashboard-active">
+		<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 	<div class="close-sidebar d-block d-lg-none pt-4 pl-4 sidebarCollapse">
 		<img src="./img/close-icon.png" alt="">
@@ -72,7 +72,7 @@
 							<!-- <span class="sr-only">Toggle Menu</span> -->
 						</button>
 						<h2 class="top-title d-none d-lg-block">
-							Dashboard_v2
+							Settings | Basic Information
 						</h2>
 						<!-- <h2 class="title-top-mob">Dashboard_v2</h2> -->
 						<a href="#" class="user">
@@ -81,212 +81,147 @@
 						</a>
 					</div>
 					<h2 class="top-title-mob d-block d-lg-none pt-0 pt-lg-4 pb-4">
-						Dashboard_v2
+						Settings | Basic Information
 					</h2>
-					<div class="dashboard-content-top pt-5">
-						<div class="d-flex">
-							<div class="dashboard-balance-wrap pr-4">
-								<h4 class="content-title pb-3">Balance</h4>
-								<div class="dashboard-balance">
-									<div class="current-amount">
-										<span class="title">Current Amount</span>
-										<div class="number text-white">
-											459 <span>usd</span>
+					<div class="dashboard-content-top settings pt-5 mb-5">
+						<div class="settings-subscription d-flex">
+							<div class="settings-subscription-menu">
+								<span class="title">Invest</span>
+								<ul class="mb-5">
+									<li><a href="#">Exchanges</a></li>
+									<li><a href="#">Algos</a></li>
+									<li><a href="#">Fees</a></li>
+								</ul>
+								<span class="title">Build</span>
+								<ul>
+									<li><a href="#">Indicators</a></li>
+									<li><a href="#">Strategies</a></li>
+									<li><a href="#">Backtests</a></li>
+									<li>
+										<a href="#">Backtests Assets</a>
+									</li>
+									<li><a href="#">Support</a></li>
+									<li>
+										<a href="#">Min Tick Resolution</a>
+									</li>
+									<li><a href="#">Publish </a></li>
+									<li>
+										<a href="#">Live Mounthly Fee</a>
+									</li>
+								</ul>
+							</div>
+							<div class="card-wrap">
+								<div class="">
+									<div class="d-flex justify-content-between align-items-baseline">
+										<h4 class="content-title pb-3">
+											Basic
+										</h4>
+										<span class="current">Current Plan</span>
+									</div>
+									<div class="basic card-item">
+										<div class="tarif">
+											<h3 class="title">Free</h3>
+											<span class="subtitle">For Life</span>
+										</div>
+
+										<div class="list">
+											<span> All </span>
+											<span> All </span>
+											<span> As per bot </span>
+										</div>
+										<div class="list">
+											<span>All</span>
+											<span>Private</span>
+											<span>100/Month</span>
+											<span>For 1 Week</span>
+											<span>Email/Discord</span>
+											<span>15 Min</span>
+											<span>No</span>
+											<span class="mb-0">1%</span>
 										</div>
 									</div>
-									<div class="dashboard-balance-bottom d-flex justify-content-between">
-										<div class="dashboard-balance-left">
-											<div class="pb-4">
-												<span class="title">Returns</span>
-												<div class="number text-white">
-													$21.53
-												</div>
+								</div>
+								<div class="">
+									<div class="d-flex justify-content-between align-items-baseline">
+										<h4 class="content-title pb-3">
+											Premium
+										</h4>
+										<span class="current"></span>
+									</div>
+									<div class="card-item premium">
+										<div class="tarif">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="radio-premium" id="radio-premium" value="option1" checked="checked">
+												<label class="form-check-label" for="radio-premium">
+													$19/mth: billed monthly
+												</label>
 											</div>
-											<div>
-												<span class="title">Invested</span>
-												<div class="number text-white">
-													$300
-												</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="radio-premium" id="radio-premium2" value="option2">
+												<label class="form-check-label" for="radio-premium2">
+													$19/mth: billed monthly
+												</label>
 											</div>
 										</div>
-										<div>
-											<div class="pb-4">
-												<span class="title">Returns (%)</span>
-												<div class="number success-color">
-													2.04%
-												</div>
+
+										<div class="list">
+											<span> All </span>
+											<span> All </span>
+											<span> As per bot </span>
+										</div>
+										<div class="list">
+											<span>All</span>
+											<span>Private</span>
+											<span>100/Month</span>
+											<span>For 1 Week</span>
+											<span>Email/Discord</span>
+											<span>15 Min</span>
+											<span>No</span>
+											<span class="mb-0">1%</span>
+										</div>
+									</div>
+								</div>
+								<div class="">
+									<div class="d-flex justify-content-between align-items-baseline">
+										<h4 class="content-title pb-3">
+											Premium +
+										</h4>
+										<span class="current"></span>
+									</div>
+									<div class="card-item premium-plus">
+										<div class="tarif">
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="radio-premium2" id="radio-premium3" value="option1" checked="checked">
+												<label class="form-check-label" for="radio-premium3">
+													$19/mth: billed monthly
+												</label>
 											</div>
-											<div>
-												<span class="title">NAV Returns</span>
-												<div class="number success-color">
-													2.04%
-												</div>
+											<div class="form-check">
+												<input class="form-check-input" type="radio" name="radio-premium2" id="radio-premium4" value="option2">
+												<label class="form-check-label" for="radio-premium4">
+													$19/mth: billed monthly
+												</label>
 											</div>
+										</div>
+
+										<div class="list">
+											<span> All </span>
+											<span> All </span>
+											<span> As per bot </span>
+										</div>
+										<div class="list">
+											<span>All</span>
+											<span>Private</span>
+											<span>100/Month</span>
+											<span>For 1 Week</span>
+											<span>Email/Discord</span>
+											<span>15 Min</span>
+											<span>No</span>
+											<span class="mb-0">1%</span>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="dashboard-graph-wrap">
-								<div class="dashboard-graph-top">
-									<h4 class="content-title pb-3">Graph</h4>
-									<div>
-										<ul class="nav nav-tabs" id="myTab" role="tablist">
-											<li class="nav-item">
-												<a class="nav-link active" id="graph-1month-tab" data-toggle="tab" href="#graph-1month" role="tab" aria-controls="graph-1month" aria-selected="true">1 month</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link" id="graph-6month-tab" data-toggle="tab" href="#graph-6month" role="tab" aria-controls="graph-6month" aria-selected="false">6 month</a>
-											</li>
-											<li class="nav-item">
-												<a class="nav-link" id="graph-year-tab" data-toggle="tab" href="#graph-year" role="tab" aria-controls="graph-year" aria-selected="false">year</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="dashboard-graph">
-									<div class="tab-content" id="myTabContent">
-										<div class="tab-pane fade show active text-white" id="graph-1month" role="tabpanel" aria-labelledby="graph-1month-tab">
-											1-month
-										</div>
-										<div class="tab-pane fade text-white" id="graph-6month" role="tabpanel" aria-labelledby="graph-1month-tab">
-											6-month
-										</div>
-										<div class="tab-pane fade text-white" id="graph-year" role="tabpanel" aria-labelledby="graph-year-tab">
-											year
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="dashboart-table-wrap pt-5 mb-5">
-						<h4 class="content-title pb-3">Your Trades</h4>
-
-						<div class="dashboart-table">
-							<table id="dashboard-table" class="table table-striped" style="width: 100%">
-	<thead>
-		<tr class="title">
-			<th>#</th>
-			<th>Date/Time</th>
-			<th>Asset</th>
-			<th>Enter Balance</th>
-			<th>Exposure Time</th>
-			<th>PNL</th>
-			<th>Action</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td class="number title">1</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>85.95 USDT</td>
-			<td class="success-color"><span class="opened">Opened</span></td>
-			<td class="success-color">0.43%</td>
-			<td><span class="close-action">Close</span></td>
-		</tr>
-		<tr>
-			<td class="number title">2</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">-3.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">3</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">-3.82%</td>
-			<td><span class="close-action">Close</span></td>
-		</tr>
-		<tr>
-			<td class="number title">4</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">3.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">5</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">3.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">6</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">7</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">8</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">9</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">10</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">11</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-		<tr>
-			<td class="number title">12</td>
-			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
-		</tr>
-	</tbody>
-</table>
-
 						</div>
 					</div>
 
@@ -299,34 +234,32 @@
 										<div class="panel-heading" role="tab" id="headingOne">
 											<h4 class="panel-title">
 												<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-													Collapsible Group Item #1
+													Is there a minimum holding
+													period for which the money
+													must be invested?
 												</a>
 											</h4>
 											<i class="fas fa-chevron-down"></i>
 										</div>
 										<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
 											<div class="panel-body">
-												Anim pariatur cliche
-												reprehenderit, enim eiusmod high
-												life accusamus terry richardson
-												ad squid. 3 wolf moon officia
-												aute, non cupidatat skateboard
-												dolor brunch. Food truck quinoa
-												nesciunt laborum eiusmod. Brunch
-												3 wolf moon tempor, sunt aliqua
-												put a bird on it squid
-												single-origin coffee nulla
-												assumenda shoreditch et. Nihil
-												anim keffiyeh helvetica, craft
-												beer labore wes anderson cred
-												nesciunt sapiente ea proident.
-												Ad vegan excepteur butcher vice
-												lomo. Leggings occaecat craft
-												beer farm-to-table, raw denim
-												aesthetic synth nesciunt you
-												probably haven't heard of them
-												accusamus labore sustainable
-												VHS.
+												No, the investment strategy can
+												be stopped at any time. Please
+												note, however, that investments
+												should be made over a medium to
+												long-term horizon (approximately
+												one year). We strongly recommend
+												to plan your investing period at
+												least on 180 days. Due to
+												natural market volatility, all
+												our strategies have the goal to
+												get double digit returns and
+												they work well on a mid- long
+												term period. If you want to
+												withdraw money every 3 days,
+												that would very rare work like
+												that, so we don't recommend to
+												play with it.
 											</div>
 										</div>
 									</div>

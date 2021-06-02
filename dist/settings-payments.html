@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
 
 		<link rel="stylesheet" href="css/index.css">
-		<title>Apollo 7 your trades</title>
+		<title>Apollo 7 settings payments</title>
 	</head>
 
 	<body>
@@ -71,7 +71,9 @@
 							<img src="./img/burger-icon.png" alt="">
 							<!-- <span class="sr-only">Toggle Menu</span> -->
 						</button>
-						<h2 class="top-title d-none d-lg-block">Your Trades</h2>
+						<h2 class="top-title d-none d-lg-block">
+							Settings | Payments
+						</h2>
 						<!-- <h2 class="title-top-mob">Dashboard_v2</h2> -->
 						<a href="#" class="user">
 							<img class="user-img" src="img/user-img.png" alt="">
@@ -79,50 +81,48 @@
 						</a>
 					</div>
 					<h2 class="top-title-mob d-block d-lg-none pt-0 pt-lg-4 pb-4">
-						Your Trades
+						Settings | Payments
 					</h2>
-
-					<div class="trades-table-wrap pt-5 mb-5">
-						<div class="dashboart-table-filter">
-							<div class="form-group">
-								<label for="trades-date-filter">Date</label>
-								<input type="text" class="form-control" id="trades-date-filter">
+					<div class="dashboard-content-top settings">
+						<div class="settings-payments-balance-wrap pr-4 pt-5">
+							<h4 class="content-title pb-3">Balance</h4>
+							<div class="settings-payments-balance">
+								<div class="balance d-flex mr-4">
+									<div class="desc">
+										<span class="title">Balance</span>
+										<span class="subtitle">Aliqua id fugiat nostrud</span>
+									</div>
+									<div class="total">
+										<span class="title">Total Balance</span>
+										<span class="number">$19.82</span>
+									</div>
+								</div>
+								<div class="deposit mr-4">
+									<span class="text">Sunt qui esse pariatur duis
+										deserunt</span>
+									<button class="settings-deposit">
+										Deposit
+									</button>
+								</div>
 							</div>
-							<div class="form-group">
-								<label for="trades-select-filter">Asset</label>
-								<select class="form-control" id="trades-select-filter">
-									<option>All/All</option>
-									<option>2</option>
-									<option>3</option>
-								</select>
-							</div>
-							<button class="btn-trades-reset" type="button">
-								Reset
-							</button>
-							<button class="btn-trades-search" type="button">
-								Search
-							</button>
-							<div class="form-check check-closed">
-								<input type="checkbox" class="form-check-input" id="check-closed">
-								<label class="form-check-label" for="check-closed">Hide all closed
-								</label>
-							</div>
-							<div class="trades-export ml-auto">
+						</div>
+					</div>
+					<div class="payments-table-wrap mb-5">
+						<div class="d-flex justify-content-between">
+							<h4 class="content-title pb-3">Invoices</h4>
+							<div class="payments-export ml-auto">
 								<span>Export History</span><img src="./img/export-icon.png" alt="">
 							</div>
 						</div>
-						<div class="trades-table">
-							
-							<table id="dashboard-table" class="table table-striped" style="width: 100%">
+
+						<div class="dashboart-table">
+							<table id="payments-table" class="table table-striped order-history-table" style="width: 100%">
 	<thead>
 		<tr class="title">
 			<th>#</th>
 			<th>Date/Time</th>
-			<th>Asset</th>
-			<th>Enter Balance</th>
-			<th>Exposure Time</th>
-			<th>PNL</th>
-			<th>Action</th>
+			<th>Amount</th>
+			<th>Status</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -130,109 +130,73 @@
 			<td class="number title">1</td>
 			<td>26.04.2021 17:00</td>
 			<td>BTC/USDT</td>
-			<td>85.95 USDT</td>
-			<td class="success-color"><span class="opened">Opened</span></td>
-			<td class="success-color">0.43%</td>
-			<td><span class="close-action">Close</span></td>
+			<td><span class="opened">Opened</span></td>
 		</tr>
 		<tr>
 			<td class="number title">2</td>
 			<td>26.04.2021 17:00</td>
 			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">-3.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td><span class="closed">Closed</span></td>
 		</tr>
 		<tr>
 			<td class="number title">3</td>
 			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">-3.82%</td>
-			<td><span class="close-action">Close</span></td>
+			<td>LTC/USDT</td>
+			<td><span class="opened">Opened</span></td>
 		</tr>
 		<tr>
 			<td class="number title">4</td>
 			<td>26.04.2021 17:00</td>
 			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">3.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td><span class="opened">Opened</span></td>
 		</tr>
 		<tr>
 			<td class="number title">5</td>
 			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">3.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td>LTC/USDT</td>
+			<td><span class="closed">Closed</span></td>
 		</tr>
 		<tr>
 			<td class="number title">6</td>
 			<td>26.04.2021 17:00</td>
 			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td><span class="opened">Opened</span></td>
 		</tr>
 		<tr>
 			<td class="number title">7</td>
 			<td>26.04.2021 17:00</td>
 			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td><span class="closed">Closed</span></td>
 		</tr>
 		<tr>
 			<td class="number title">8</td>
 			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td>LTC/USDT</td>
+			<td><span class="opened">Opened</span></td>
 		</tr>
 		<tr>
 			<td class="number title">9</td>
 			<td>26.04.2021 17:00</td>
 			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td><span class="opened">Opened</span></td>
 		</tr>
 		<tr>
 			<td class="number title">10</td>
 			<td>26.04.2021 17:00</td>
 			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td><span class="opened">Opened</span></td>
 		</tr>
 		<tr>
 			<td class="number title">11</td>
 			<td>26.04.2021 17:00</td>
-			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="success-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td>LTC/USDT</td>
+			<td><span class="closed">Closed</span></td>
 		</tr>
 		<tr>
 			<td class="number title">12</td>
 			<td>26.04.2021 17:00</td>
 			<td>BTC/USDT</td>
-			<td>75.25 USDT</td>
-			<td>2h 54m</td>
-			<td class="danger-color">14.82%</td>
-			<td class="text-color-muted">Closed</td>
+			<td><span class="opened">Opened</span></td>
 		</tr>
 	</tbody>
 </table>
@@ -241,7 +205,53 @@
 					</div>
 				</div>
 			</div>
+			<div class="settings-payments-card-wrap settings">
+				<div class="d-flex justify-content-between">
+					<h4 class="content-title pb-3">Card</h4>
+					<!-- <div class="card-slider-arrows"></div> -->
+				</div>
+
+				<div class="settings-payments-card slider-card">
+					<div class="item new d-flex">
+						<a href="#">
+							<div class="d-flex align-items-center">
+								<span>Add New Card</span>
+								<div class="ml-2">
+									<img src="img/card-plus-icon.png" alt="">
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img src="img/card-1.png" alt="">
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img src="img/card-2.png" alt="">
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img src="img/card-1.png" alt="">
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img src="img/card-2.png" alt="">
+						</a>
+					</div>
+					<div class="item">
+						<a href="#">
+							<img src="img/card-1.png" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="card-slider-arrows mt-3"></div>
+			</div>
 		</div>
+
 		<div class="footer pl-4 pl-sm-5 pr-4 pr-sm-5 d-flex flex-column-reverse flex-lg-row pt-4 pb-4 pt-lg-0 pb-lg-0">
 	<span class="copy">© 2021 SynergyOne</span>
 	<ul class="text-link mr-xl-auto pt-4 pb-4 pt-lg-0 pb-lg-0">

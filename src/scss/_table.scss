@@ -40,6 +40,13 @@
 	padding: 5px 10px;
 	border-radius: 20px;
 	background: $bg-success;
+	color: #02c076;
+}
+.closed {
+	padding: 5px 10px;
+	border-radius: 20px;
+	background: #443619;
+	color: #f5a623;
 }
 .buy {
 	padding: 5px 10px;
@@ -116,7 +123,21 @@
 	}
 }
 
+#payments-table_wrapper .row {
+	&:nth-child(3) {
+		background: $bg-sidebar;
+		max-width: calc(100% - 0px);
+		margin: 0 auto;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-left: 1px solid $border-color;
+		border-right: 1px solid $border-color;
+		border-bottom: 1px solid $border-color;
+	}
+}
+
 #dashboard-table_paginate,
+#payments-table_paginate,
 #your-trades-table_paginate,
 #order-history-table-open_paginate,
 #order-history-table-closed_paginate {
@@ -133,7 +154,9 @@ table.dataTable {
 
 #order-history-table-open_filter,
 #order-history-table-closed_filter,
+#payments-table_filter,
 #order-history-table-open_length,
+#payments-table_length,
 #order-history-table-closed_length {
 	display: none;
 }
@@ -252,6 +275,20 @@ table.dataTable {
 			// &:hover {
 			// 	border: none;
 			// }
+		}
+	}
+}
+
+.payments-table-wrap {
+	margin-top: 340px;
+	.payments-export {
+		span {
+			font-weight: bold;
+			font-size: 14px;
+			color: #fff;
+		}
+		img {
+			margin-left: 10px;
 		}
 	}
 }

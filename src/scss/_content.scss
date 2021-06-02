@@ -92,3 +92,340 @@
 		}
 	}
 }
+
+.settings {
+	&-title-top {
+		@include flex;
+	}
+	&-title-top {
+		a {
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			img {
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	.edit {
+		margin-right: 60px;
+	}
+	&-avatar-wrap {
+		max-width: 200px;
+		width: 100%;
+		.title {
+			@include content-subtitle;
+			display: block;
+		}
+		.upload-img-link {
+			display: block;
+			color: #fff;
+			font-size: 14px;
+			font-weight: bold;
+			margin-top: 25px;
+			img {
+				margin-left: 5px;
+			}
+		}
+	}
+
+	.form-control {
+		color: #fff;
+		background: transparent;
+		border-radius: 10px;
+		border: 1px solid $border-color;
+		padding: 12px 5px 12px 15px;
+		height: auto;
+		&:focus {
+			border-color: $accent-color;
+			outline: 0;
+			box-shadow: none;
+		}
+	}
+	label {
+		font-size: 14px;
+		color: #90929a;
+		margin-bottom: 10px;
+	}
+	&-basic-information {
+		width: 100%;
+	}
+	&-basic-wrap {
+		display: flex;
+	}
+	.form-grid-2 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		column-gap: 30px;
+		margin: 65px 0;
+	}
+	.form-grid-3 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		column-gap: 30px;
+	}
+	.btn-settings-basic {
+		@include btn-fill;
+		width: 118px;
+		margin-top: 15px;
+	}
+	&-payments-balance {
+		display: flex;
+	}
+	.desc {
+		padding-right: 40px;
+		border-right: 1px solid $border-color;
+		.title {
+			font-size: 14px;
+			font-weight: bold;
+			color: #fff;
+			display: block;
+			padding-top: 25px;
+		}
+		.subtitle {
+			font-size: 14px;
+			padding-top: 10px;
+			color: $title-top-color;
+			display: block;
+		}
+	}
+	.total {
+		padding-left: 40px;
+		.title {
+			font-size: 14px;
+			display: block;
+			padding-top: 25px;
+			color: $accent-color;
+		}
+		.number {
+			font-size: 24px;
+			font-weight: bold;
+			color: #fff;
+			display: block;
+			padding-top: 4px;
+		}
+	}
+	.balance {
+		@include wrap-block;
+		padding: 30px;
+		max-width: 427px;
+		width: 100%;
+	}
+	.deposit {
+		@include wrap-block;
+		padding: 30px 18px 20px 18px;
+		max-width: 195px;
+		width: 100%;
+		.text {
+			font-size: 14px;
+			color: $title-top-color;
+			margin-bottom: 25px;
+			display: block;
+			text-align: center;
+		}
+	}
+	.settings-deposit {
+		@include btn-fill;
+		width: 157px;
+	}
+
+	&-payments-card-wrap {
+		top: 405px;
+		position: absolute;
+		left: 275px;
+		.slider-card {
+			.item {
+				width: 313px;
+				margin-right: 30px;
+				&.new {
+					@include wrap-block;
+					height: 183px;
+					justify-content: center;
+					align-items: center;
+					span {
+						font-size: 14px;
+						color: #fff;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+	}
+	.content-title {
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	&-subscription {
+		.card-wrap {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			column-gap: 30px;
+			.basic {
+				@include wrap-block;
+				span {
+					color: $title-top-color !important;
+				}
+				.tarif {
+					height: 64px;
+				}
+			}
+			.card-item {
+				min-height: 675px;
+				padding: 30px;
+				text-align: center;
+				span {
+					font-size: 14px;
+					font-weight: bold;
+					margin-bottom: 22px;
+					display: block;
+					color: #fff;
+				}
+				.list {
+					&:nth-child(2) {
+						margin: 65px 0 75px;
+					}
+				}
+				label {
+					cursor: pointer;
+				}
+			}
+			.premium {
+				background: #3c242c;
+				border-radius: 10px;
+				[type="radio"]:checked + label:before,
+				[type="radio"]:not(:checked) + label:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 18px;
+					height: 18px;
+					border: 1px solid #f84960;
+					border-radius: 5px;
+					background: transparent;
+				}
+				[type="radio"]:checked + label:after,
+				[type="radio"]:not(:checked) + label:after {
+					content: "";
+					width: 10px;
+					height: 10px;
+					background: #f84960;
+					position: absolute;
+					top: 4px;
+					left: 4px;
+					border-radius: 2px;
+					-webkit-transition: all 0.2s ease;
+					transition: all 0.2s ease;
+				}
+			}
+			.premium-plus {
+				background: #443619;
+				border-radius: 10px;
+				[type="radio"]:checked + label:before,
+				[type="radio"]:not(:checked) + label:before {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 18px;
+					height: 18px;
+					border: 1px solid #f5a623;
+					border-radius: 5px;
+					background: transparent;
+				}
+				[type="radio"]:checked + label:after,
+				[type="radio"]:not(:checked) + label:after {
+					content: "";
+					width: 10px;
+					height: 10px;
+					background: #f5a623;
+					position: absolute;
+					top: 4px;
+					left: 4px;
+					border-radius: 2px;
+					-webkit-transition: all 0.2s ease;
+					transition: all 0.2s ease;
+				}
+			}
+			.tarif {
+				.title {
+					display: block;
+					font-size: 24px;
+					color: #fff;
+					font-weight: bold;
+					margin-bottom: 5px;
+				}
+				.subtitle {
+					font-size: 12px;
+					color: $title-top-color;
+				}
+			}
+		}
+		.current {
+			font-size: 12px;
+			color: $title-top-color;
+		}
+		&-menu {
+			margin-right: 50px;
+			width: 150px;
+			padding-top: 85px;
+			.title {
+				font-size: 12px;
+				color: $title-top-color;
+				margin-bottom: 30px;
+				display: block;
+			}
+			a {
+				font-size: 14px;
+				font-weight: bold;
+				margin-top: 22px;
+				display: block;
+				color: #fff;
+			}
+		}
+	}
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+	position: absolute;
+	left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+	position: relative;
+	padding-left: 28px;
+	cursor: pointer;
+	line-height: 20px;
+	display: inline-block;
+	color: #666;
+}
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+	content: "";
+	width: 12px;
+	height: 12px;
+	background: #f87da9;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}

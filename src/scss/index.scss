@@ -97,13 +97,13 @@ a {
 
 body {
 	-webkit-touch-callout: none; /* iOS Safari */
-	-webkit-user-select: none;   /* Chrome/Safari/Opera */
-	-khtml-user-select: none;    /* Konqueror */
-	-moz-user-select: none;      /* Firefox */
-	-ms-user-select: none;       /* Internet Explorer/Edge */
-	user-select: none;           /* Non-prefixed version, currently
+	-webkit-user-select: none; /* Chrome/Safari/Opera */
+	-khtml-user-select: none; /* Konqueror */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
 									not supported by any browser */
-  }
+}
 
 select {
 	-webkit-appearance: none;
@@ -135,6 +135,7 @@ select {
 
 .wrapper {
 	width: 100%;
+	position: relative;
 }
 
 .success-color {

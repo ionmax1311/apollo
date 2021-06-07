@@ -120,10 +120,14 @@
 		margin-top: 10px;
 	}
 	@media (max-width: 992px) {
-		position: absolute;
+		position: fixed;
 		overflow-y: auto;
 		height: 100%;
 	}
+	// .sidebar-in {
+	// 	height: 100%;
+	// 	overflow: scroll;
+	// }
 }
 
 a[data-toggle="collapse"] {

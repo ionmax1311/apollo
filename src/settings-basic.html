@@ -35,7 +35,9 @@
 	</head>
 
 	<body>
-		<div class="wrapper d-flex align-items-stretch">
+		<div
+			class="wrapper d-flex align-items-stretch basic-information-active"
+		>
 			@@include('parts/sidebar.html')
 
 			<div id="content" class="pt-4 pl-4 pt-lg-5 pr-4">
@@ -80,7 +82,9 @@
 						<div class="settings-title-top pb-4">
 							<h4 class="content-title">Account Info</h4>
 							<div>
-								<a href="#" class="edit"
+								<a
+									href="#"
+									class="edit d-md-inline-block d-none"
 									>Edit information
 									<img
 										class="ml-3"
@@ -99,14 +103,36 @@
 						</div>
 						<div class="settings-basic-wrap">
 							<div class="settings-avatar-wrap mr-4">
-								<span class="title">Avatar</span>
-								<img src="img/avatar.png" alt="" />
-								<a class="upload-img-link" href="#"
-									>Upload New
-									<img src="img/plus-icon.png" alt="" />
-								</a>
+								<div>
+									<span class="title">Avatar</span>
+									<img src="img/avatar.png" alt="" />
+								</div>
+								<div class="mt-4 mt-md-0">
+									<a
+										href="#"
+										class="edit d-block d-md-none pl-4 mr-0"
+										>Edit
+										<img
+											class="ml-3"
+											src="img/edit-icon.png"
+											alt=""
+									/></a>
+									<a
+										class="upload-img-link pl-4 pl-md-0"
+										href="#"
+										>Upload New
+										<img src="img/plus-icon.png" alt="" />
+									</a>
+								</div>
 							</div>
-							<div class="settings-basic-information">
+							<div
+								class="
+									settings-basic-information
+									mt-5
+									mb-5
+									mt-md-0
+								"
+							>
 								<form>
 									<div class="form-grid-3">
 										<div class="form-group">

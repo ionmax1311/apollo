@@ -13,7 +13,6 @@
 		$("#sidebar").toggleClass("active");
 		$("body").toggleClass("hidden");
 		$(".overlay").toggleClass("active");
-
 	});
 	$(".panel-heading").on("click", function () {
 		$(this).find(".fa-chevron-down").toggleClass("active");
@@ -22,20 +21,17 @@
 
 $("input[type=checkbox]").click(function () {
 	if ($(this).is(":checked")) {
-
-		$(this).attr('checked', true);
+		$(this).attr("checked", true);
 		$(this).val(1);
-		console.log('checked---', $(this).val());
+		console.log("checked---", $(this).val());
 	} else {
-		$(this).attr('checked', false);
+		$(this).attr("checked", false);
 		$(this).val(0);
-		console.log('not checked---', $(this).val());
+		console.log("not checked---", $(this).val());
 	}
 });
 
 $(document).ready(function () {
-
-
 	$("#dashboard-table").DataTable({
 		// info: false,
 		language: {
@@ -74,35 +70,37 @@ $(document).ready(function () {
 	});
 });
 
-// $("#dashboard-table_wrapper>.row:nth-child(3)").append("<div>more</div>");
+$(document).ready(function () {
+	console.log($(".wrapper").hasClass("dashboard-active"));
+	if ($(".wrapper").hasClass("dashboard-active")) {
+		$(".inner a").removeClass("active");
+		$(".inner").find('a:contains("Dashboard")').addClass("active");
 
-// $('#sidebar .inner ul a').click(function () {
-// 	$('#sidebar a').removeClass('active')
-// 	$(this).addClass('active')
-// })
+		console.log(1);
+	} else if ($(".wrapper").hasClass("order-history-active")) {
+		$(".inner a").removeClass("active");
+		$(".inner")
+			.find('span:contains("Order History")')
+			.parent("a.link")
+			.addClass("active");
 
-// $(document).ready(function () {
-// 	console.log($(".wrapper").hasClass("dashboard-active"));
-// 	if ($(".wrapper").hasClass("dashboard-active")) {
-// 		$(".inner a").removeClass("active");
-// 		$(".inner").find('a:contains("Dashboard")');
-
-// 		console.log(1);
-// 	} else if ($(".wrapper").hasClass("order-history-active")) {
-// 		$(".inner a").removeClass("active");
-// 		$(".inner").find('a:contains("Order History")');
-
-// 		console.log(2);
-// 	}
-// });
+		console.log(2);
+	} else if ($(".wrapper").hasClass("your-trades-active")) {
+		$(".inner a").removeClass("active");
+		$(".inner").find('a:contains("Your Trades")').addClass("active");
+	} else if ($(".wrapper").hasClass("basic-information-active")) {
+		$(".inner a").removeClass("active");
+		$(".inner").find('a:contains("Basic Information")').addClass("active");
+	} else if ($(".wrapper").hasClass("payments-active")) {
+		$(".inner a").removeClass("active");
+		$(".inner").find('a:contains("Payments")').addClass("active");
+	} else if ($(".wrapper").hasClass("subscription-active")) {
+		$(".inner a").removeClass("active");
+		$(".inner").find('a:contains("Subscription")').addClass("active");
+	}
+});
 
 $(".slider-card").slick({
-	// autoplay: true,
-	// autoplaySpeed: 1000,
-	// asNavFor: ".slider-poster-nav",
-	// centerPadding: "60px",
-	// slidesToShow: 4,
-	// slidesToScroll: 1,
 	dots: false,
 	arrows: true,
 	infinite: true,
